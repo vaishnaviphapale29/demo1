@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="login-card">
+        <div class="brand">
+          <div class="brand-mark">L</div>
+          <span>Launch</span>
+        </div>
+
+        <div class="welcome-text">
+          <p class="eyebrow">Welcome back</p>
+          <h1>Sign in to your account</h1>
+        </div>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <label class="input-group">
+            <span>Email</span>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </label>
+
+          <label class="input-group">
+            <span>Password</span>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          </label>
+
+          <div class="meta-row">
+            <label class="remember-me">
+              <input type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="primary-btn">Sign In</button>
+
+          <div class="divider"><span>or continue with</span></div>
+
+          <div class="social-row">
+            <button type="button" class="social-btn">Google</button>
+            <button type="button" class="social-btn">GitHub</button>
+          </div>
+
+          <p class="signup-text">
+            Don’t have an account?
+            <a href="#" class="link">Create one</a>
+          </p>
+
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

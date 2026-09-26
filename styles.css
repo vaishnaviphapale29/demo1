@@ -1,0 +1,244 @@
+:root {
+  --bg-dark: #0f172a;
+  --bg-light: #111827;
+  --panel: rgba(15, 23, 42, 0.75);
+  --panel-border: rgba(148, 163, 184, 0.2);
+  --card-shadow: 0 25px 50px rgba(15, 23, 42, 0.45);
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --success: #10b981;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(139, 92, 246, 0.25), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.2), transparent 25%),
+    linear-gradient(135deg, var(--bg-dark), var(--bg-light));
+  color: var(--text);
+}
+
+.page-shell {
+  width: min(100%, 1100px);
+  padding: 32px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  width: min(100%, 430px);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--panel-border);
+  border-radius: 24px;
+  padding: 28px 26px 22px;
+  box-shadow: var(--card-shadow);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), #60a5fa);
+  color: white;
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.4);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #c4b5fd;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.welcome-text h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.login-form {
+  margin-top: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.input-group span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.75);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 14px 14px;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder {
+  color: #64748b;
+}
+
+.input-group input:focus {
+  border-color: rgba(139, 92, 246, 0.8);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 22px;
+}
+
+.remember-me {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.remember-me input {
+  accent-color: var(--primary);
+}
+
+.link {
+  color: #c4b5fd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary-btn,
+.social-btn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 14px 16px;
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.35);
+}
+
+.primary-btn:hover,
+.social-btn:hover {
+  transform: translateY(-1px);
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 22px 0 18px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto;
+  height: 1px;
+  background: rgba(148, 163, 184, 0.2);
+}
+
+.divider span {
+  position: relative;
+  display: inline-block;
+  padding: 0 12px;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.social-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.social-btn {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: var(--text);
+  padding: 12px 14px;
+}
+
+.signup-text {
+  margin: 20px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.form-message {
+  min-height: 22px;
+  margin: 18px 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.form-message.success {
+  color: var(--success);
+}
+
+.form-message.error {
+  color: var(--danger);
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px 18px 18px;
+    border-radius: 18px;
+  }
+
+  .meta-row,
+  .social-row {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .meta-row {
+    justify-content: flex-start;
+  }
+}
